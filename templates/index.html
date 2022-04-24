@@ -1,43 +1,32 @@
-{% extends 'base.html' %} {% block body %}
 
-<h1>My List of Friends</h1>
-<hr />
-<h3>Be my friend:</h3>
-<form action="/add_friend" method="POST">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname" autofocus required />
-  <br />
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname" />
-  <br />
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" />
-  <br /><br />
-  <input type="submit" id="submit" value="I'll Be Your Friend" />
-  <input type="reset" value="Clear" />
-</form>
-<br />
-<br />
 
-<hr />
-<br />
-{% if friends %}
-<h3>My Friends</h3>
-<table id="friends">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Email Address</th>
-    </tr>
-  </thead>
+{% extends 'base.html' %}
 
-  <tbody>
-    {% for friend in friends %}
-    <tr>
-      <td>{{ friend.name }}</td>
-      <td>{{ friend.email }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-{% endif %} {% endblock %}
+{% block body %} 
+ 
+    <h2> Welcome! </h2>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non vehicula velit, vel pretium urna. 
+        Donec bibendum sed mi eget volutpat. Ut vitae elementum libero, vel volutpat lectus. Fusce elementum, 
+        elit id porta vehicula, mi lorem pulvinar velit, eget egestas ante elit non sapien. Cras ut quam feugiat, 
+        faucibus sapien id, commodo massa. Integer nec magna quis nulla laoreet venenatis. Aenean suscipit rhoncus 
+        augue, sed interdum neque ornare non. Suspendisse rutrum tempus molestie. Donec efficitur leo nisl, id gravida 
+        massa commodo at. Fusce mattis aliquet erat, et volutpat magna tristique quis. Suspendisse rhoncus tincidunt 
+        quam, ut condimentum diam fermentum a.
+    <img src="{{ url_for('static',filename='Images/above_ground_vertical_tanks.jpg')}}"/>
+    <img style="float: right; padding: 10px 10px 10px 10px;"/>
+    </div>
+    <div>
+    <br />
+        Sed interdum molestie risus at mattis. Duis ac pretium elit. Maecenas tincidunt orci at mauris porta, sit 
+        amet vestibulum tellus pretium. Donec auctor porta dolor, vel viverra libero commodo id. Vestibulum lacinia 
+        mauris non felis sagittis iaculis. Nullam efficitur, tellus sit amet ornare sollicitudin, odio quam scelerisque 
+        nulla, non blandit eros turpis non erat. Quisque justo velit, convallis ut euismod sed, feugiat et metus. Quisque 
+        porttitor arcu vel lectus ornare, quis fringilla neque lobortis. Suspendisse id dolor fermentum, maximus dolor nec, 
+        lacinia leo. Sed suscipit leo eu nibh porttitor, eget tincidunt arcu varius. Nam sit amet ornare augue, ac sagittis ligula. 
+        Nulla facilisi. Maecenas blandit nisl vel vulputate ultrices. Fusce finibus ut mi scelerisque euismod. Lorem ipsum dolor sit 
+        amet, consectetur adipiscing elit.
+    </div>
+
+
+{% endblock %}
