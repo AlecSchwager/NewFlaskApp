@@ -2,8 +2,7 @@ name: Build and deploy flask app
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 jobs:
