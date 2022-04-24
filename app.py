@@ -12,6 +12,13 @@ def index():
 def about():
     return render_template('about.html', pageTitle='About')
 
+def calculate_top_area(radius)
+    return 3.14*(radius**2)
+
+def calculate_side_area(radius,height)
+    return 2*(3.14*(radius*height))
+
+
 @app.route('/estimate', methods=['GET','POST'])
 def estimate():
     if request.method == 'POST':
