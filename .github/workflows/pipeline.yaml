@@ -66,8 +66,7 @@ jobs:
         with:
           name: python-app
           path: |
-          ./build
-
+            ./BUILD
 
   deploy:
     runs-on: ubuntu-latest
