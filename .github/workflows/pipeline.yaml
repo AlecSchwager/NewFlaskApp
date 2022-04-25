@@ -71,7 +71,7 @@ package:
 
 deploy:
   runs-on: ubuntu-latest
-    needs: package
+    needs: BUILD
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
